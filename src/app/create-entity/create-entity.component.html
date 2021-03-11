@@ -1,1 +1,11 @@
-<p>create-entity works!</p>
+<div>
+  <div class="name">
+    <input id="name" type="text" placeholder="Name" [(ngModel)]="entity.name">
+  </div>
+  <div class="age">
+    <input id="age" type="text" placeholder="Age" [(ngModel)]="entity.age">
+  </div>
+  <div>
+    <button (click)="add()">Submit</button>
+  </div>
+</div>

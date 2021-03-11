@@ -1,1 +1,28 @@
-<p>my-entity works!</p>
+<br><br><br>
+<div align="center">
+  <button routerLink="/create-entity">Add New Entity</button>
+</div>
+<br><br>
+<div align="center">
+  <input type="text" [(ngModel)]="name">
+  <button (click)="getEntitiesByName()">Enter Entity's Name</button>
+</div>
+<div class="container">
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Action</th>
+    </thead>
+    <tbody *ngFor="let eachentity of entities">
+      <td style="display: none">{{eachentity.id}}</td>
+      <td>{{eachentity.name}}</td>
+      <td>{{eachentity.age}}</td>
+      <td>
+        <button (click)="deleteEntity(eachentity.id)">Delete</button>
+        <button (click)="goToUpdatePage(eachentity.id)">Update</button>
+      </td>
+    </tbody>
+  </table>
+</div>
+

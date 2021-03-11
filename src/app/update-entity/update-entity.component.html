@@ -1,1 +1,14 @@
-<p>update-entity works!</p>
+<div>
+  <div class="id" hidden>
+    <input id="id" type="text" placeholder="ID" [(ngModel)]="entity.id">
+  </div>
+  <div class="name">
+    <input id="name" type="text" placeholder="Name" [(ngModel)]="entity.name">
+  </div>
+  <div class="age">
+    <input id="age" type="text" placeholder="Age" [(ngModel)]="entity.age">
+  </div>
+  <div>
+    <button (click)="update()">Submit</button>
+  </div>
+</div>
